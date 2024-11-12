@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//pt-BR">
+<head>
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/SuaSortehoje/bahiadasorte/main/dpsport.jpg">
+    <link rel="icon" href="https://raw.githubusercontent.com/SuaSortehoje/bahiadasorte/main/dpsport.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
     <title>Título da página</title>
     <style>
         h1{
@@ -21,10 +27,12 @@
             width:30%;
             height:50px;
             margin:2px;
+            color:red;
             border-radius:50px;
         }
         button:hover,focus{
             background:#40ffa1;
+            color:white;
         }
         .btnPix{
             
@@ -49,19 +57,31 @@
     <h1>DP SPORT</h1>
     <img class ="imgemCentral" src="imagemCentral.jpg"/>
     <div class="btnDv">
-    <button>WHATSAPP</button>
-    <button>APOSTE AQUI</button>
+    <button id="btn1">WHATSAPP</button>
+    <button id="btn2">APOSTE AQUI</button>
     
-    <button class="btnPix">CHAVE PIX</button>
+    <button id="btn3"class="btnPix">CHAVE PIX</button>
   
-     <button class="btnComoJogar">COMO JOGAR</button>
-     <input type="button" value="INDIQUE E GANHE" class="btnindiqueGanhe"></button>
+     <button id="btn4"class="btnComoJogar">COMO JOGAR</button>
+     <input id="btn5"type="button" value="INDIQUE E GANHE" class="btnindiqueGanhe"></button>
     </div>
     <script>
         const carlos = document.body;
         carlos.style.backgroundColor = "lightblue";
         carlos.style.color="red";
         carlos.fontsize ="10px";
+        
+        // Função para redirecionar o usuário para um URL
+    function redirecionar(url) {
+        window.location.href = url;
+    }
+
+    // Adicionando eventos de clique para cada botão
+    document.getElementById('btn1').addEventListener('click', () => redirecionar('https://wa.me/5571992290058'));
+    document.getElementById('btn2').addEventListener('click', () => redirecionar('https://WWW.DPSPORTE.COM'));
+    document.getElementById('btn3').addEventListener('click', () => redirecionar('https://multijogo.github.io/Link-de-pagamento-pix/'));
+    document.getElementById('btn4').addEventListener('click', () => redirecionar('Jogar.html'));
+    document.getElementById('btn5').addEventListener('click', () => redirecionar('https://wa.me/5571992290058'));
     </script>
 </body>
 </html>
