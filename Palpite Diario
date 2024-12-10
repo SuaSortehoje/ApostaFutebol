@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>PALPITE DO DIA </title>
+    <style>
+          h1{
+                font-size:15px;
+                text-align:center;
+          }
+          .divQuadro{
+             width:100%;
+             background:skyblue;
+             height:550px;
+             text-align:center;
+             border:1px solid red;
+          }
+          .imagemQuandro{
+         margin-top:10px;
+                width:94%;
+                text-align:center;
+             height:500px;
+             border:1px solid red;
+          }
+          .divButton{
+          
+          justify-content:beetween;
+                margin:5px;
+          }
+          
+.animated-box {
+  
+  width:50%;
+  color:white;
+  font-weight:bold;
+  background:skyblue;
+  border-radius:5px;
+}
+
+/* Definindo a animação */
+@keyframes moveAndChangeColor {
+  10% {
+    background-color: gold;
+    
+  }
+    30% {
+    background-color: blue;
+    
+  }
+  50% {
+    background-color: red;
+    
+  }
+  100% {
+    background-color: green;
+    
+  }
+}
+
+/* Aplicando a animação ao elemento */
+.animated-box {
+  animation: moveAndChangeColor 4s ease-in-out infinite;
+}
+
+    </style>
+</head>
+<body>
+      <h1>PALPITE GRATIS DIARIO <br>APARTIR DAS 08:00</h1>
+      <div class="divQuadro">
+    <img class="imagemQuandro" id="imgMudada" src="imagem1.jpg" alt="Imagem" ><div class="divButton">
+   <a href="https://pixplay.netlify.app/dpsport"><button class="animated-box">JOGAR</button></a></div>
+    </div>
+    <script>
+        // Lista de imagens
+        const imagens = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg",["img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg",["img9.jpg", "img10.jpg"];
+        let indice = 0; // Índice inicial
+
+        const mudada = document.getElementById("imgMudada");
+
+        // Função para trocar a imagem
+        function trocarImagem() {
+            indice = (indice + 1) % imagens.length; // Incrementa e reinicia se chegar ao fim
+            mudada.src = imagens[indice]; // Atualiza o src da imagem
+        }
+
+        // Troca a imagem a cada 20 segundos
+        let intervalo = setInterval(trocarImagem, 10000);
+
+        // Reinicia o ciclo ao receber foco
+        window.addEventListener("focus", () => {
+            clearInterval(intervalo); // Limpa o intervalo atual
+            indice = 0; // Reinicia o índice
+            mudada.src = imagens[indice]; // Define a imagem inicial
+            intervalo = setInterval(trocarImagem, 20000); // Recomeça o intervalo
+        });
+    </script>
+</body>
+</html>
