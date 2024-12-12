@@ -97,14 +97,14 @@ p{
         }
 
         // Troca a imagem a cada 20 segundos
-        let intervalo = setInterval(trocarImagem, 1000);
+        let intervalo = setInterval(trocarImagem, 10000);
 
         // Reinicia o ciclo ao receber foco
         window.addEventListener("focus", () => {
             clearInterval(intervalo); // Limpa o intervalo atual
             indice = 0; // Reinicia o índice
             mudada.src = imagens[indice]; // Define a imagem inicial
-            intervalo = setInterval(trocarImagem, 20000); // Recomeça o intervalo
+            intervalo = setInterval(trocarImagem, 10000); // Recomeça o intervalo
         });
         alert("AGUARDE ATE 1 MINUTO\nPARA ACESSÁ OS PALPITE ")
     </script>
