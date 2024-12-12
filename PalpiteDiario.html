@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
     <title>PALPITE DO DIA </title>
     <style>
+          body{
+                background:black;
+          }
           h1{
                 font-size:15px;
                 text-align:center;
@@ -64,18 +67,25 @@
 .animated-box {
   animation: moveAndChangeColor 4s ease-in-out infinite;
 }
-
+p{
+      text-align:center;
+      background:tomato;
+      color:white;
+      font-weight:bold;
+      margin:4px;
+}
     </style>
 </head>
 <body>
       <h1>PALPITE GRATIS DIARIO <br>APARTIR DAS 08:00</h1>
+      <p>QUINTA DIA 12/12</p>
       <div class="divQuadro">
     <img class="imagemQuandro" id="imgMudada" src="imagem1.jpg" alt="Imagem" ><div class="divButton">
    <a href="https://pixplay.netlify.app/dpsport"><button class="animated-box">JOGAR</button></a></div>
     </div>
     <script>
         // Lista de imagens
-        const imagens = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg", "img10.jpg"];
+        const imagens = ["img11.jpg", "img12.jpg", "img13.jpg", "img14.jpg", "img15.jpg", "img16.jpg", "img17.jpg", "img18.jpg", "img19.jpg", "img20.jpg"];
         let indice = 0; // Índice inicial
 
         const mudada = document.getElementById("imgMudada");
@@ -87,7 +97,7 @@
         }
 
         // Troca a imagem a cada 20 segundos
-        let intervalo = setInterval(trocarImagem, 10000);
+        let intervalo = setInterval(trocarImagem, 2000);
 
         // Reinicia o ciclo ao receber foco
         window.addEventListener("focus", () => {
@@ -96,6 +106,7 @@
             mudada.src = imagens[indice]; // Define a imagem inicial
             intervalo = setInterval(trocarImagem, 20000); // Recomeça o intervalo
         });
+        alert("AGUARDE ATE 1 MINUTO\nPARA ACESSÁ OS PALPITE ")
     </script>
 </body>
 </html>
