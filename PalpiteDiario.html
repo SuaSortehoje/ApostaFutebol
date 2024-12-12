@@ -36,10 +36,11 @@
           
 .animated-box {
   
-  width:50%;
+  width:40%;
   color:white;
   font-weight:bold;
   background:skyblue;
+  margin:5px;
   border-radius:5px;
 }
 
@@ -74,6 +75,13 @@ p{
       font-weight:bold;
       margin:4px;
 }
+.btn{
+      background:green;
+      border-radius:10px;
+      color:white;
+      width:25%;
+      font-weight:bold;
+}
     </style>
 </head>
 <body>
@@ -81,7 +89,8 @@ p{
       <p>QUINTA DIA 12/12</p>
       <div class="divQuadro">
     <img class="imagemQuandro" id="imgMudada" src="imagem1.jpg" alt="Imagem" ><div class="divButton">
-   <a href="https://pixplay.netlify.app/dpsport"><button class="animated-box">JOGAR</button></a></div>
+   <button class="btn" onclick="proximo ()">VOLTAR</button><a href="https://pixplay.netlify.app/dpsport"><button class="animated-box">JOGAR</button></a>
+   <button class="btn" onclick="proximo ()">PROXIMO</button></div>
     </div>
     <script>
         // Lista de imagens
@@ -97,7 +106,7 @@ p{
         }
 
         // Troca a imagem a cada 20 segundos
-        let intervalo = setInterval(trocarImagem, 10000);
+        let intervalo = setInterval(trocarImagem, 1000);
 
         // Reinicia o ciclo ao receber foco
         window.addEventListener("focus", () => {
@@ -106,7 +115,10 @@ p{
             mudada.src = imagens[indice]; // Define a imagem inicial
             intervalo = setInterval(trocarImagem, 10000); // Recomeça o intervalo
         });
-        alert("AGUARDE ATE 1 MINUTO\nPARA ACESSÁ OS PALPITE ")
+        alert("AGUARDE ATE 1 MINUTO\nPARA ACESSÁ OS PALPITE ");
+        function proximo(){
+              alert("aguarde...")
+        }
     </script>
 </body>
 </html>
